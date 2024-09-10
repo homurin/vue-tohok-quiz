@@ -1,0 +1,337 @@
+[
+  {
+    "id": "1",
+    "img": "https://cdn.kyou.id/items/127290-with-bonus-badge-reimu-hakurei-ver15-fumofumo-plush-touhou-project.jpg",
+    "race": "Human",
+    "questions": [
+      {
+        "id": "1",
+        "text": "Who is Reimu Hakurei?",
+        "answer": [
+          {
+            "id": "1",
+            "label": "A",
+            "text": "A shrine maiden of the Hakurei Shrine.",
+            "correct": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "text": "A character from the anime Naruto.",
+            "correct": false
+          },
+          {
+            "id": "3",
+            "label": "C",
+            "text": "A legendary warrior from ancient China.",
+            "correct": false
+          },
+          {
+            "id": "4",
+            "label": "D",
+            "text": "A famous pop star in the Touhou universe.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "text": "What is Reimu Hakurei’s primary role in the Touhou Project series?",
+        "answer": [
+          {
+            "id": "1",
+            "label": "A",
+            "text": "She maintains the balance between the human world and the world of spirits.",
+            "correct": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "text": "She is a secondary character with no major role.",
+            "correct": false
+          },
+          {
+            "id": "3",
+            "label": "C",
+            "text": "She is the main antagonist causing conflicts between realms.",
+            "correct": false
+          },
+          {
+            "id": "4",
+            "label": "D",
+            "text": "She appears only in spin-off games.",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "img": "https://ih1.redbubble.net/image.2196638548.1505/raf,360x360,075,t,fafafa:ca443f4786.jpg",
+    "race": "Youkai",
+    "questions": [
+      {
+        "id": "1",
+        "text": "What is a youkai in the Touhou Project series?",
+        "answer": [
+          {
+            "id": "1",
+            "label": "A",
+            "text": "A supernatural creature or spirit that often causes trouble for humans.",
+            "correct": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "text": "A type of magical artifact with healing properties.",
+            "correct": false
+          },
+          {
+            "id": "3",
+            "label": "C",
+            "text": "A human who has mastered ancient martial arts.",
+            "correct": false
+          },
+          {
+            "id": "4",
+            "label": "D",
+            "text": "A mechanical robot built to protect Gensokyo.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "text": "Which of the following characters is a youkai?",
+        "answer": [
+          {
+            "id": "1",
+            "label": "A",
+            "text": "Ran Yakumo",
+            "correct": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "text": "Sakuya Izayoi",
+            "correct": false
+          },
+          {
+            "id": "3",
+            "label": "C",
+            "text": "Cirno",
+            "correct": false
+          },
+          {
+            "id": "4",
+            "label": "D",
+            "text": "Patchouli Knowledge",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "img": "https://i.ytimg.com/vi/1OZeI81JeOc/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYACygWKAgwIABABGGUgVihNMA8=&rs=AOn4CLCMoBjM6Wp4gY7Un-X9HpH4NNzO7Q",
+    "race": "Tengu",
+    "questions": [
+      {
+        "id": "1",
+        "text": "What are tengu known for in Gensokyo?",
+        "answer": [
+          {
+            "id": "1",
+            "label": "A",
+            "text": "Tengu are known for their skill in martial arts and their ability to control the wind.",
+            "correct": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "text": "Tengu are primarily known for their cooking skills and hospitality.",
+            "correct": false
+          },
+          {
+            "id": "3",
+            "label": "C",
+            "text": "Tengu are known for their ability to speak to animals and command them.",
+            "correct": false
+          },
+          {
+            "id": "4",
+            "label": "D",
+            "text": "Tengu are mythical creatures with the ability to manipulate time.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "text": "Which of these characters is a tengu?",
+        "answer": [
+          {
+            "id": "1",
+            "label": "A",
+            "text": "Aya Shameimaru",
+            "correct": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "text": "Sakuya Izayoi",
+            "correct": false
+          },
+          {
+            "id": "3",
+            "label": "C",
+            "text": "Marisa Kirisame",
+            "correct": false
+          },
+          {
+            "id": "4",
+            "label": "D",
+            "text": "Reimu Hakurei",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "img": "https://pbs.twimg.com/media/FRDO_FUVUAAREQE.jpg:large",
+    "race": "Vampire",
+    "questions": [
+      {
+        "id": "1",
+        "text": "What are vampires known for in the Touhou Project series?",
+        "answer": [
+          {
+            "id": "1",
+            "label": "A",
+            "text": "Vampires are known for their immortality and their ability to control supernatural powers.",
+            "correct": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "text": "Vampires are known for their farming skills and their ability to communicate with animals.",
+            "correct": false
+          },
+          {
+            "id": "3",
+            "label": "C",
+            "text": "Vampires are known for their extraordinary cooking abilities and their love of fine dining.",
+            "correct": false
+          },
+          {
+            "id": "4",
+            "label": "D",
+            "text": "Vampires are known for their technological advancements and mechanical inventions.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "text": "Which character is a vampire in the Touhou Project series?",
+        "answer": [
+          {
+            "id": "1",
+            "label": "A",
+            "text": "Remilia Scarlet",
+            "correct": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "text": "Sakuya Izayoi",
+            "correct": false
+          },
+          {
+            "id": "3",
+            "label": "C",
+            "text": "Cirno",
+            "correct": false
+          },
+          {
+            "id": "4",
+            "label": "D",
+            "text": "Marisa Kirisame",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkDQsxPkbropcaELfqWYBYgck479SnKoerdA&s",
+    "race": "Fairy",
+    "questions": [
+      {
+        "id": "1",
+        "text": "What characteristics are typical of fairies in the Touhou Project series?",
+        "answer": [
+          {
+            "id": "1",
+            "label": "A",
+            "text": "Fairies are known for their small size, magical abilities, and mischievous behavior.",
+            "correct": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "text": "Fairies are large, powerful beings with control over natural elements.",
+            "correct": false
+          },
+          {
+            "id": "3",
+            "label": "C",
+            "text": "Fairies are ancient warriors with expertise in combat skills.",
+            "correct": false
+          },
+          {
+            "id": "4",
+            "label": "D",
+            "text": "Fairies are human-like beings with advanced technology.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "text": "Which of these characters is a fairy?",
+        "answer": [
+          {
+            "id": "1",
+            "label": "A",
+            "text": "Cirno",
+            "correct": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "text": "Aya Shameimaru",
+            "correct": false
+          },
+          {
+            "id": "3",
+            "label": "C",
+            "text": "Remilia Scarlet",
+            "correct": false
+          },
+          {
+            "id": "4",
+            "label": "D",
+            "text": "Sakuya Izayoi",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  }
+]
