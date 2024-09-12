@@ -1,21 +1,21 @@
 <script setup lang="ts">
 import { ref, watch } from "vue";
 import QuizCard from "@/components/QuizCard.vue";
-import questionsData from "../../dev-data/quiz.json";
+import quizzes from "../../dev-data/quizzes.json";
 import type { Quiz } from "@/types/quiz";
 
-const questions = ref<Array<Quiz>>(questionsData);
+const questions = ref<Array<Quiz>>(quizzes);
 const search = ref<string>("");
 
 watch(search, () => {
-  questions.value = questionsData.filter((e) => {
+  questions.value = quizzes.filter((e) => {
     return e.race.toLowerCase().includes(search.value.toLowerCase());
   });
 });
 </script>
 <template>
   <section class="quiz">
-    <header>
+    <header class="quiz__header">
       <h1 id="title">Touhou Quiz</h1>
       <input type="text" id="search-input" v-model="search" />
     </header>
@@ -25,7 +25,7 @@ watch(search, () => {
   </section>
 </template>
 <style scoped>
-header {
+.quiz__header {
   margin-top: 2rem;
   margin-bottom: 1rem;
   display: flex;
