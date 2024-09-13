@@ -5,15 +5,15 @@ export type Answer = Array<{
   correct: boolean;
 }>;
 
-export type Questions = Array<{
+export type Question = {
   id: string;
   text: string;
   answer: Answer;
-}>;
+};
 
 export interface Quiz {
   id: string;
   img: string;
   race: string;
-  questions: Questions;
+  questions: Array<Question>;
 }

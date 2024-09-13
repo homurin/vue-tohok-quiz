@@ -26,7 +26,7 @@ function showQuestion(): void {
       </figcaption>
     </figure>
     <button @click="showQuestion">
-      {{ !isShowQuestion ? "Hide Questions" : "Show Questions" }}
+      {{ isShowQuestion ? "Hide Questions" : "Show Questions" }}
     </button>
     <RouterView />
   </section>

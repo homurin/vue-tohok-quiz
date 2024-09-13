@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from "vue-router";
 import HomePage from "@/views/HomeView.vue";
 import AboutPage from "@/views/AboutView.vue";
-import QuizView from "@/views/QuizView.vue";
-import QuestionView from "@/views/QuestionView.vue";
+import QuizzesView from "@/views/QuizzesView.vue";
+import QuestionsView from "@/views/QuestionsView.vue";
 import NotFoundView from "@/views/errors/NotFoundView.vue";
 
 const routes: Array<RouteRecordRaw> = [
@@ -19,12 +19,12 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/quiz/:id",
     name: "quiz",
-    component: QuizView,
+    component: QuizzesView,
     children: [
       {
         path: "question",
         name: "question",
-        component: QuestionView
+        component: QuestionsView
       }
     ]
   },
