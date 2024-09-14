@@ -6,16 +6,17 @@ import QuestionHeader from "@/components/QuestionHeader.vue";
 import QuestionContent from "@/components/QuestionContent.vue";
 
 const route = useRoute();
-const currQuestionIdx = ref<number>(0);
+const selectedAnswers = ref<Array<{ questionId: string; answerId: string }>>([]);
 const quiz = quizzes.find((e) => e.id == route.params.id);
+const currQuestionIdx = ref<number>(0);
 
 const currQuestion = computed(
-  () => `Question ${currQuestionIdx.value + 1}/${quiz?.questions.length}`
+  () => `Finished Question ${selectedAnswers.value.length}/${quiz?.questions.length}`
 );
 
 const barPercentage = computed((): string => {
   if (quiz) {
-    return `${((currQuestionIdx.value + 1) / quiz?.questions.length) * 100}%`;
+    return `${(selectedAnswers.value.length / quiz?.questions.length) * 100}%`;
   }
   return "0%";
 });
@@ -34,16 +35,59 @@ function prevQuestion() {
     }
   }
 }
+
+function getSelectedAnswer(answerId: string): void {
+  if (quiz) {
+    const questionId = quiz.questions[currQuestionIdx.value].id;
+    const isExist = selectedAnswers.value.find((e) => e.questionId === questionId);
+    if (!isExist) {
+      selectedAnswers.value.push({ questionId, answerId });
+    } else {
+      const answeredQuestionIdx = selectedAnswers.value.findIndex(
+        (e) => e.questionId === questionId
+      );
+      selectedAnswers.value[answeredQuestionIdx].answerId = answerId;
+    }
+    if (currQuestionIdx.value < quiz?.questions.length - 1) {
+      currQuestionIdx.value++;
+    }
+  }
+  console.log(selectedAnswers.value);
+}
+
+function finishButton() {
+  if (quiz) {
+    return quiz.questions
+      .flatMap((question) => {
+        return question.answer.filter((e) => e.correct);
+      })
+      .map((e) => {
+        return e.id;
+      });
+  }
+}
 </script>
 <template>
   <QuestionHeader :curr-question="currQuestion" :bar-percentage />
   <section v-if="quiz?.questions">
-    <QuestionContent :questions="quiz.questions[currQuestionIdx]" />
+    <QuestionContent
+      :questions="quiz.questions[currQuestionIdx]"
+      @selected-answer="getSelectedAnswer"
+    />
     <div id="nav-btn-container">
       <button @click="prevQuestion" :disabled="currQuestionIdx <= 0">Prev</button>
-      <button @click="nextQuestion" :disabled="currQuestionIdx + 1 >= quiz.questions.length">
-        Next
+      <button
+        v-if="currQuestionIdx + 1 === quiz.questions.length"
+        @click="
+          () => {
+            console.info(`done`);
+          }
+        "
+        :disabled="selectedAnswers.length < quiz.questions.length"
+      >
+        Finish
       </button>
+      <button v-if="currQuestionIdx + 1 < quiz.questions.length" @click="nextQuestion">Next</button>
     </div>
   </section>
   <div v-else>Question not found</div>

@@ -1,13 +1,23 @@
 <script setup lang="ts">
 import type { Question } from "@/types/quiz";
 defineProps<{ questions: Question }>();
+const emit = defineEmits<{ selectedAnswer: [answerId: string] }>();
+
+function emitSelectedAnswer(answerId: string) {
+  emit("selectedAnswer", answerId);
+}
 </script>
 <template>
   <section id="questions-container">
     <h3 class="question-title">{{ questions.text }}</h3>
   </section>
   <section id="answers-container">
-    <div class="answers-container__answer" v-for="answer in questions.answer" :key="answer.id">
+    <div
+      class="answers-container__answer"
+      v-for="answer in questions.answer"
+      :key="answer.id"
+      @click="emitSelectedAnswer(answer.id)"
+    >
       <p class="answer-label">{{ answer.label }}</p>
       <div class="answer-value">{{ answer.text }}</div>
     </div>

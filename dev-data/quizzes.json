@@ -35,6 +35,36 @@
         ]
       },
       {
+        "id": "3",
+        "text": "Who is Reimu Hakurei?",
+        "answer": [
+          {
+            "id": "1",
+            "label": "A",
+            "text": "A shrine maiden of the Hakurei Shrine.",
+            "correct": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "text": "A character from the anime Naruto.",
+            "correct": false
+          },
+          {
+            "id": "3",
+            "label": "C",
+            "text": "A legendary warrior from ancient China.",
+            "correct": false
+          },
+          {
+            "id": "4",
+            "label": "D",
+            "text": "A famous pop star in the Touhou universe.",
+            "correct": false
+          }
+        ]
+      },
+      {
         "id": "2",
         "text": "What is Reimu Hakurei’s primary role in the Touhou Project series?",
         "answer": [
