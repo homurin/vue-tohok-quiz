@@ -20,12 +20,12 @@ function showQuestion(): void {
     <figure id="hero-img">
       <img class="hero-img__img" :src="quiz.img" :alt="quiz.race" />
       <figcaption>
-        <h2>
+        <h2 class="quiz-title">
           {{ quiz.race }}
         </h2>
       </figcaption>
     </figure>
-    <button @click="showQuestion">
+    <button class="toggle-button" @click="showQuestion">
       {{ isShowQuestion ? "Hide Questions" : "Show Questions" }}
     </button>
     <RouterView />
@@ -39,5 +39,17 @@ function showQuestion(): void {
   width: 100%;
   height: 40dvh;
   object-fit: cover;
+}
+.quiz-title {
+  margin: 1em 0;
+}
+.toggle-button {
+  padding: 0.5em;
+  border: 2px solid green;
+  background-color: transparent;
+  color: green;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  cursor: pointer;
 }
 </style>

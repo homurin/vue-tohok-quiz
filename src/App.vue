@@ -33,5 +33,6 @@ body {
 }
 #main-container {
   margin-top: 7rem;
+  margin-bottom: 5rem;
 }
 </style>

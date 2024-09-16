@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import type { Question } from "@/types/quiz";
-defineProps<{ questions: Question }>();
-const emit = defineEmits<{ selectedAnswer: [answerId: string] }>();
-
-function emitSelectedAnswer(answerId: string) {
-  emit("selectedAnswer", answerId);
+const props = defineProps<{
+  questions: Question;
+  selectedAnswers: string;
+}>();
+const emit = defineEmits<{ getSelectedAnswer: [answerId: string] }>();
+function emitgetSelectedAnswer(answerId: string) {
+  emit("getSelectedAnswer", answerId);
+}
+function isSelected(answerId: string) {
+  return props.selectedAnswers === answerId;
 }
 </script>
 <template>
@@ -16,9 +21,11 @@ function emitSelectedAnswer(answerId: string) {
       class="answers-container__answer"
       v-for="answer in questions.answer"
       :key="answer.id"
-      @click="emitSelectedAnswer(answer.id)"
+      @click="emitgetSelectedAnswer(answer.id)"
     >
-      <p class="answer-label">{{ answer.label }}</p>
+      <p class="answer-label" :class="[isSelected(answer.id) ? 'selected-answer-label' : '']">
+        {{ answer.label }}
+      </p>
       <div class="answer-value">{{ answer.text }}</div>
     </div>
   </section>
@@ -52,10 +59,13 @@ function emitSelectedAnswer(answerId: string) {
   width: 1.5em;
   background-color: rgb(167, 167, 167);
 }
-
 .answer-value {
   width: 100%;
   background-color: #e5e5e5;
   padding-left: 0.3em;
+}
+.selected-answer-label {
+  background-color: rgb(0, 198, 26);
+  color: white;
 }
 </style>
